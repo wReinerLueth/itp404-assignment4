@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 4</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div id="left-searches">
+    <h3 id="title">Previous Searches</h3>
+    <ul id="search-list">
+
+    </ul>
+  </div>
+
+  <div id="main-display">
+    <textarea id="search-area" cols="50" rows="5"></textarea>
+    <button id="search-button">Search</button>
+
+    <div id="repo-display" class="repos"></div>
+
+    <template id="repo-template">
+      <div class="repo">
+        <p>{{term}}</p>
+        <p>{{createdAt}}</p>
+      </div>
+    </template>
+
+    <template id="repos-template">
+      <h3>Repo Name and Date Created</h3>
+      {{#each repos}}
+        <div class="repo">
+          <p>{{term}}</p>
+          <p>{{createdAt}}</p>
+        </div>
+      {{/each}}
+    </template>
+
+  </div>
+
+  <script src="src/jquery-3.2.1.js"></script>
+  <script src="src/handlebars-v4.0.10.js"></script>
+  <script src="src/main.js"></script>
+
+</body>
+</html>
